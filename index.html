@@ -13457,25 +13457,5 @@
   }, 100);
 </script>
 
-    <script>
-  const fixFavicon = () => {
-    // remove all existing icons
-    document.querySelectorAll("link[rel*='icon']").forEach(e => e.remove());
-
-    // add your icon cleanly
-    const icon = document.createElement("link");
-    icon.rel = "icon";
-    icon.type = "image/png";
-    icon.href = "./only-Photoroom.png";
-
-    document.head.appendChild(icon);
-  };
-
-  // run multiple times to beat Framer
-  window.addEventListener("load", fixFavicon);
-  setTimeout(fixFavicon, 500);
-  setTimeout(fixFavicon, 1000);
-</script>
-    
 </body>
 </html>
