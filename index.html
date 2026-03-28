@@ -23,9 +23,9 @@
     
     <meta name="description" content="A slick and creative agency template made for video editors, video editing agency owners!">
     <meta name="framer-search-index" content="https://framerusercontent.com/sites/20XxN00ShEoyjhJEsQrs5/searchIndex-0xVlbEYOP2Xb.json">
-    <link href="./webicon.png" rel="icon" media="(prefers-color-scheme: light)">
-    <link href="./webicon.png" rel="icon" media="(prefers-color-scheme: dark)">
-    <link rel="apple-touch-icon" href="./webicon.png">
+    <link href="./webicon.png" type="image/png" sizes="32x32" rel="icon" media="(prefers-color-scheme: light)">
+    <link href="./webicon.png" type="image/png" sizes="32x32" rel="icon" media="(prefers-color-scheme: dark)">
+    <link rel="apple-touch-icon" type="image/png" sizes="32x32" href="./webicon.png">
     <title>EditFlow - Video Editing Agency</title>
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -13456,5 +13456,20 @@
     document.title = "EditFlow";
   }, 100);
 </script>
+
+    <script>
+  setTimeout(() => {
+    const link = document.querySelector("link[rel~='icon']");
+    if (link) {
+      link.href = "./only-Photoroom.png";
+    } else {
+      const newLink = document.createElement("link");
+      newLink.rel = "icon";
+      newLink.href = "./only-Photoroom.png";
+      document.head.appendChild(newLink);
+    }
+  }, 200);
+</script>
+    
 </body>
 </html>
