@@ -13453,22 +13453,28 @@
     <!-- End of bodyEnd -->
     <script>
   setTimeout(() => {
-    document.title = "EditFlow";
+    document.title = "EditFlow Studio";
   }, 100);
 </script>
 
     <script>
-  setTimeout(() => {
-    const link = document.querySelector("link[rel~='icon']");
-    if (link) {
-      link.href = "./only-Photoroom.png";
-    } else {
-      const newLink = document.createElement("link");
-      newLink.rel = "icon";
-      newLink.href = "./only-Photoroom.png";
-      document.head.appendChild(newLink);
-    }
-  }, 200);
+  const fixFavicon = () => {
+    // remove all existing icons
+    document.querySelectorAll("link[rel*='icon']").forEach(e => e.remove());
+
+    // add your icon cleanly
+    const icon = document.createElement("link");
+    icon.rel = "icon";
+    icon.type = "image/png";
+    icon.href = "./only-Photoroom.png";
+
+    document.head.appendChild(icon);
+  };
+
+  // run multiple times to beat Framer
+  window.addEventListener("load", fixFavicon);
+  setTimeout(fixFavicon, 500);
+  setTimeout(fixFavicon, 1000);
 </script>
     
 </body>
